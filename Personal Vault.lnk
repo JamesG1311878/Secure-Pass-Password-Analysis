@@ -1,0 +1,81 @@
+print("hello world!")
+passw = input("Enter your password: ")
+def length_check(password):
+    length = len(password)
+    if length < 8:
+        return 0
+    elif length < 12 and length > 7:
+        return 1
+    elif length < 16 and length > 12:
+        return 2
+    else:
+        return 3
+def num_specials(password):
+    count = 0
+    special_characters = ['!', '@', '#', '$', '%', '^', '&', '*', '(', ')', 
+                       '-', '_', '=', '+', '[', ']', '{', '}', ';', ':', 
+                       "'", '"', ',', '.', '<', '>', '/', '?', '\\', '|', 
+                       '`', '~']
+    for x in password:
+        for y in special_characters:
+            if x == y:
+                count = count + 1
+    return count
+def num_uppers(password):
+    count = 0
+    for x in password:
+        if x.isupper():
+            count += 1
+    return count
+def num_lowers(password):
+    count = 0
+    for x in password:
+        if x.islower():
+            count += 1
+    return count
+def num_nums(password):
+    count = 0
+    nums = [1,2,3,4,5,6,7,8,9,0]
+    for x in password:
+        for y in nums:
+            if x == y:
+                count += 1
+    return count
+def special_variety(password):
+    special_characters = ['!', '@', '#', '$', '%', '^', '&', '*', '(', ')', 
+                           '-', '_', '=', '+', '[', ']', '{', '}', ';', ':', 
+                           "'", '"', ',', '.', '<', '>', '/', '?', '\\', '|', 
+                           '`', '~','£']
+    specials_count = []
+    for x in special_characters:
+        count = 0
+        for y in password:
+            if x == y:
+                count = count + 1
+        specials_count.append(count)
+    highest = max(specials_count)
+    repetition_score = 0
+    if highest > 2:
+        repetition_score = 1
+    elif highest == 2:
+        repetition_score = 2
+    elif highest == 1:
+        repetition_score = 3
+    variety_count = 0
+    for a in specials_count:
+        if a > 0:
+            variety_count += 1
+    if variety_count == 0:
+       varscore = 0
+    elif variety_count == 1:
+       varscore = 1
+    elif variety_count == 2:
+        varscore = 2
+    else:
+        varscore = 3
+    total_score = varscore + repetition_score
+    return total_score
+print(special_variety(passw))
+    
+        
+

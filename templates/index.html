@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Checker</title>
+</head>
+<body style = "background-image: url('/static/hack.jpg'); background-size: cover;">
+    <h1 style = "text-align: center; color:  whitesmoke; background-color: #0CC922 ;">Secure Pass</h1>
+    <form method="POST">
+        <input type="password" name="password" placeholder="Enter a password" style = "align-self: center; width: 500px; height: 80px; text-align: center; font-size: 50px; position: absolute; top: 30%; left: 50%; transform: translate(-50%, -50%);">
+        <button style="position: absolute; top: 40%; left: 50%; transform: translate(-50%, -50%);">Check Password</button>
+    </form>
+    <h2 style = "position: absolute; font-size: 50px; color: gainsboro ;top: 45%; left: 50%; transform: translate(-50%, -50%);">Result:</h2>
+    <p style = "position: absolute; font-size: 50px; color: gainsboro; top: 55%; left: 50%; transform: translate(-50%, -50%);">{{ label }} — SCORE: {{ score }}</p>
+
+    {% if tips %}
+    <ul style="position: absolute; top: 75%; left: 50%; transform: translate(-50%, 0); color: gainsboro; font-size: 20px; text-align: left;">
+      {% for tip in tips %}
+        <li>{{ tip }}</li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+</body>   
+</html>

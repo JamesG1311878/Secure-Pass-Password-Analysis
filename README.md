@@ -5,7 +5,7 @@ A Flask web app that scores a password out of 100, gives a rating, and suggests 
 URL to live cloud-deployed website: https://jg1311878.pythonanywhere.com/
 
  Features
-- Scores passwords out of 24 based on:
+- Scores passwords out of 100 based on:
   - length
   - character mix
   - variety of special characters

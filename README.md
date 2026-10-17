@@ -22,9 +22,6 @@ The breach check uses k-anonymity: only the first 5 characters of the password's
 Tech
 Python, Flask, Flask-Limiter, Have I Been Pwned API, deployed on PythonAnywhere.
 
-
-Then open http://127.0.0.1:5000 in your browser. (Change `app.py` to your main file's name if it differs.)
-
 ## Possible improvements
 - Train a machine learning model on leaked-password data and compare it with the rule-based scoring
 - Add automated tests

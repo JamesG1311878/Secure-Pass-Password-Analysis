@@ -7,9 +7,9 @@ def length_check(password):
     length = len(password)
     if length < 8:
         return 0
-    elif length < 12 and length > 7:
+    elif length < 12:
         return 1
-    elif length < 16 and length > 12:
+    elif length < 16:
         return 2
     else:
         return 3
